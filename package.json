@@ -1,0 +1,27 @@
+{
+  "name": "quick-react",
+  "version": "1.0.0",
+  "description": "React and Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "no test now",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longthanhtran/to-be-added.git"
+  },
+  "keywords": [
+    "react",
+    "express"
+  ],
+  "author": "Long Tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/longthanhtran/to-be-added/issues"
+  },
+  "homepage": "https://github.com/longthanhtran/to-be-added#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
