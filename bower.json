@@ -13,6 +13,9 @@
   "homepage": "no-home-page.info",
   "private": true,
   "dependencies": {
-    "react": "^15.0.2"
+    "react": "^15.0.2",
+    "bootstrap": "~3.3.6",
+    "babel": "*",
+    "marked": "~0.3.5"
   }
 }
