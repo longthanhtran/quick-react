@@ -51,7 +51,9 @@ var CommentBox = React.createClass({
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.state.data} />
-        <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
+        <div className="input-group col-md-6">
+          <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
+        </div>
       </div>
     );
   }
@@ -97,19 +99,27 @@ var CommentForm = React.createClass({
   },
   render: function() {
     return (
-      <form className="commentForm" onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          placeholder="Your name"
-          value={this.state.author}
-          onChange={this.handleAuthorChange}
-        />
-        <input
-          type="text"
-          placeholder="Say something ..."
-          value={this.state.text}
-          onChange={this.handleTextChange}
-        />
+      <form className="commentForm-1" onSubmit={this.handleSubmit}>
+        <div className="input-group">
+          <span className="input-group-addon">Name</span>
+          <input
+            type="text"
+            placeholder="Your name"
+            value={this.state.author}
+            onChange={this.handleAuthorChange}
+            className="form-control"
+          />
+        </div>
+        <div className="input-group">
+          <span className="input-group-addon">Your idea</span>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Say something ..."
+            value={this.state.text}
+            onChange={this.handleTextChange}
+          />
+        </div>
         <input type="submit" value="Post" />
       </form>
     );

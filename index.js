@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
+var express_ws = require('express-ws')(app)
 
 var COMMENTS_FILE = path.join(__dirname, 'comments.json');
 
@@ -55,6 +56,13 @@ app.post('/api/comments', function(req, res) {
     })
   })
 })
+
+app.ws('/echo', function(ws, req) {
+  ws.on('message', function(msg) {
+    ws.send(msg)
+  })
+})
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
