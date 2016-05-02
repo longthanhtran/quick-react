@@ -1,0 +1,18 @@
+{
+  "name": "quick-react",
+  "authors": [
+    "Long Tran <long.thanh.tran@gmail.com>"
+  ],
+  "description": "A quick walk thru with react",
+  "main": "app.js",
+  "keywords": [
+    "react",
+    "quick"
+  ],
+  "license": "MIT",
+  "homepage": "no-home-page.info",
+  "private": true,
+  "dependencies": {
+    "react": "^15.0.2"
+  }
+}
