@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quick React</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="example"></div>
+    </div>
+
+    <script src="lib/react/react.min.js"></script>
+    <script src="lib/react/react-dom.min.js"></script>
+    <script src="lib/babel/browser.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/marked/marked.min.js"></script>
+
+    <script type="text/babel">
+      var Avatar = React.createClass({
+        render: function() {
+          return (
+            <div>
+              <PagePic pagename={this.props.pagename} />
+              <PageLink pagename={this.props.pagename} />
+            </div>
+          );
+        }
+      });
+
+      var PagePic = React.createClass({
+        render: function() {
+          return (
+            <img src={'https://graph.facebook.com/' + this.props.pagename + '/picture'} />
+          );
+        }
+      });
+
+      var PageLink = React.createClass({
+        render: function() {
+          return (
+            <a href={'https://www.facebook.com/' + this.props.pagename}>
+              {this.props.pagename}
+            </a>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <Avatar pagename="Engineering" />,
+        document.getElementById('example')
+      )
+    </script>
+  </body>
+</html>

@@ -1,2 +1,4 @@
 public/lib/*
+social_creds.ini
 node_modules
+php_app/vendor

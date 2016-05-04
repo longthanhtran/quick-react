@@ -9,7 +9,6 @@
   <body>
     <div class="container">
       <div id="example"></div>
-      <div id="content"></div>
     </div>
 
     <script src="lib/react/react.min.js"></script>
@@ -19,8 +18,28 @@
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="lib/marked/marked.min.js"></script>
 
-    <script src="js/app.js" type="text/babel"></script>
     <script type="text/babel">
+      var LikeButton = React.createClass({
+        getInitialState: function() {
+          return {liked: false}
+        },
+        handle_click: function() {
+          this.setState({liked: !this.state.liked})
+        },
+        render: function() {
+          var text = this.state.liked ? 'like' : 'haven\'t liked'
+          return (
+            <p onClick={this.handle_click}>
+              You {text} this. Click to toggle.
+            </p>
+          )
+        }
+      })
+
+      ReactDOM.render(
+        <LikeButton />,
+        document.getElementById('example')
+      )
     </script>
   </body>
 </html>
