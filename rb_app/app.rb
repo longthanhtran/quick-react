@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'json'
 require 'twitter'
+require 'sinatra/reloader' if development?
 
 class App < Sinatra::Base
   include Configure

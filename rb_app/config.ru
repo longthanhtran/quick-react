@@ -1,5 +1,5 @@
 require './configure'
-require './check_tt1'
+require './app'
 require 'inifile'
 
 use Rack::Deflater
